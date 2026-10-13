@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Little Herb Garden</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <img class="logo" src="images/logo.svg" alt="" width="48" height="48">
+    <p class="site-name">The Little Herb Garden</p>
+    <nav>
+      <ul>
+        <li><a href="#herbs">Herbs</a></li>
+        <li><a href="#visiting">Visit</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Herbs you can smell, taste and grow</h1>
+        <p>A small garden with herbs for the kitchen, for tea and for the bees.
+          See <a href="#herbs">what grows here</p>
+      </div>
+      <img class="hero" src="images/garden.png" alt="Two raised beds full of herbs, with a bee">
+    </section>
+
+    <section id="herbs">
+      <h2>What grows here</h2>
+      <p class="count">Loading the herbs…</p>
+      <ul id="herbs-list" class="cards"></ul>
+    </section>
+
+    <section id="visit">
+      <h2>Visit</h2>
+      <p>The garden is open every day from sunrise to sunset.
+        Bring a friend, rub a leaf between your fingers, and leave the bees alone.</p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>The garden is made up, and so is this site: a practice project for
+        <a href="https://github.com/pepe/culs-frontend-day1">Frontend Development, day 1</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with HTML, CSS and JavaScript.
+      <a href="https://developer.mozilla.org/">MDN</a> helped.</p>
+  </footer>
+</body>
+</html>
