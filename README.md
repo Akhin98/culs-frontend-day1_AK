@@ -45,6 +45,22 @@ data/         herbs.json (list of ids) + one JSON file per herb
 images/       logo.svg, garden.svg
 ```
 
+## What we built
+We repaired the broken page (day 1) and then extended it.
+
+**Day 2: content**
+
+- semantic HTML: `header`, `nav`, `main`, `section`, `figure`, `footer`
+- a harvest table with `caption` and `th scope`
+- an inline SVG sun icon
+- a FAQ with `details` and `summary`, which works without JavaScript
+- a skip link, visible focus outlines and a mobile layout
+
+**Day 3: functionality**
+
+- search by name, Latin name or use (try "tea" or "bees")
+- filter by life cycle: all, annual or perennial
+
 ## How it works
 
 ```
