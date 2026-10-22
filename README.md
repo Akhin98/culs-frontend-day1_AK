@@ -1,9 +1,9 @@
 # Team:
 =======
-- Akhin
-- Anchal
-- Abhinav
-- Satyam
+- Akhin Asokan Nair
+- Anchal Singh
+- Abhinav Kumar Parbat
+- Satyam Dwivedi
 
 # The Little Herb Garden
 
