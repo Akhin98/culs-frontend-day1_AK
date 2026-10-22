@@ -9,10 +9,12 @@
   <script src="app.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <img class="logo" src="images/Logo.svg" alt="" width="48" height="48">
     <p class="site-name">The Little Herb Garden</p>
-    <nav>
+    <nav aria-label="Main">
       <ul>
         <li><a href="#herbs">Herbs</a></li>
         <li><a href="#visit">Visit</a></li>
@@ -21,6 +23,7 @@
     </nav>
   </header>
 
+<<<<<<< HEAD
   <main>
     <section class="intro">
       <div>
@@ -30,24 +33,60 @@
       </div>
       <img class="hero" src="images/garden.svg" alt="Two raised beds full of herbs, with a bee">
     </section>
+=======
+  <main id="main" tabindex="-1">
+    <noscript>
+      <p class="notice">This garden is built with JavaScript. Please turn it on to see the herbs.</p>
+    </noscript>
+>>>>>>> 8a804c19dd877c4e6171a26403f425d03323ebc9
 
-    <section id="herbs">
-      <h2>What grows here</h2>
-      <p class="count">Loading the herbs…</p>
-      <ul id="herbs-list" class="cards"></ul>
-    </section>
+    <!-- Home view: shown for an empty hash, #herbs, #visit and #about -->
+    <div id="home">
+      <section class="intro">
+        <div>
+          <h1>Herbs you can smell, taste and grow</h1>
+          <p>A small garden with herbs for the kitchen, for tea and for the bees.
+            See <a href="#herbs">what grows here</a>.</p>
+        </div>
+        <img class="hero" src="images/garden.svg" alt="Two raised beds full of herbs, with a bee">
+      </section>
 
-    <section id="visit">
-      <h2>Visit</h2>
-      <p>The garden is open every day from sunrise to sunset.
-        Bring a friend, rub a leaf between your fingers, and leave the bees alone.</p>
-    </section>
+      <section id="herbs">
+        <h2>What grows here</h2>
+        <form class="filters" role="search" aria-label="Filter herbs">
+          <div>
+            <label for="search">Search</label>
+            <input id="search" type="search" placeholder="Name, Latin name or use" autocomplete="off">
+          </div>
+          <div>
+            <label for="life">Life cycle</label>
+            <select id="life">
+              <option value="all">All</option>
+              <option value="annual">Annual</option>
+              <option value="perennial">Perennial</option>
+            </select>
+          </div>
+        </form>
+        <p class="count" aria-live="polite">Loading the herbs…</p>
+        <p id="home-message" class="notice" role="alert" hidden></p>
+        <ul id="herbs-list" class="cards"></ul>
+      </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>The garden is made up, and so is this site: a practice project for
-        <a href="https://github.com/pepe/culs-frontend-day1">Frontend Development, day 1</a>.</p>
-    </section>
+      <section id="visit">
+        <h2>Visit</h2>
+        <p>The garden is open every day from sunrise to sunset.
+          Bring a friend, rub a leaf between your fingers, and leave the bees alone.</p>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>The garden is made up, and so is this site: a practice project for
+          <a href="https://github.com/pepe/culs-frontend-day1">Frontend Development, day 1</a>.</p>
+      </section>
+    </div>
+
+    <!-- Herb view: filled by app.js for #basil, #sage, ... -->
+    <section id="detail" hidden></section>
   </main>
 
   <footer>

@@ -7,10 +7,17 @@
   --paper: #fbfaf5;
   --ink: #1f2420;
   --line: #cfdccb;
+  --focus: #e0a800;
+  --warn-bg: #fff4e0;
+  --warn-line: #d9a441;
 }
 
 * {
   box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 body {
@@ -23,6 +30,31 @@ body {
 
 a {
   color: var(--leaf);
+}
+
+/* Keyboard users must always see where they are. */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Elements focused by script (headings, main) need no ring. */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 0.25rem;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 .site-header {
@@ -85,8 +117,35 @@ section {
   border-radius: 0.5rem;
 }
 
+/* Search and filter */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filters label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.filters input,
+.filters select {
+  min-width: 12rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--soil);
+  border-radius: 0.25rem;
+  font: inherit;
+  background: white;
+}
+
+/* Cards */
+
 .cards {
-  dispaly: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
   gap: 1rem;
   margin: 0;
@@ -118,6 +177,43 @@ section {
   border-radius: 1rem;
   background: var(--leaf-light);
   font-size: 0.875rem;
+}
+
+/* One herb */
+
+.herb {
+  max-width: 36rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.herb .name {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.herb .use {
+  font-size: 1.125rem;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+/* Messages */
+
+.notice {
+  padding: 1rem;
+  border: 1px solid var(--warn-line);
+  border-radius: 0.5rem;
+  background: var(--warn-bg);
+}
+
+.notice h2 {
+  margin-top: 0;
 }
 
 footer {
