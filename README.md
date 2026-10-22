@@ -28,7 +28,7 @@ Made for the Frontend Development course (CULS, 2026). It started as the repaire
 You need Git, a browser and [Node.js](https://nodejs.org/) (LTS).
 
 ```
-git clone https://github.com/AbhinavParbat/culs-frontend-day1.git
+git clone https://github.com/Akhin98/culs-frontend-day1_AK/
 cd culs-frontend-day1
 npx serve
 ```
@@ -119,7 +119,7 @@ To test each case: use `#unicorn`; rename a data file; break a JSON file; or sto
 
 ## Git history
 
-Work was done in small commits, one change each. See the [commit history](https://github.com/AbhinavParbat/culs-frontend-day1/commits/main).
+Work was done in small commits, one change each. See the [commit history](https://github.com/Akhin98/culs-frontend-day1_AK/commits/main).
 
 ## Decisions and lessons
 
