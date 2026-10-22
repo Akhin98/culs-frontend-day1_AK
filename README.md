@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 # Team:
+=======
 - Anchal
 - Akhin
 - Abhinav
