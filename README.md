@@ -1,4 +1,4 @@
-# Team ओस की बूँदें
+# Team
 - Anchal
 - Akhin
 - Abhinav
