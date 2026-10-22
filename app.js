@@ -160,6 +160,45 @@ function focusHeading(root) {
   heading.focus({ preventScroll: true })
 }
 
+
+// ---------------------------------------------------------------- Ambient Audio Feature
+// Ambient Audio Feature
+const ambientAudio = new Audio('audio/rain.mp3');
+ambientAudio.loop = true;
+ambientAudio.volume = 0.2; // Keep it subtle
+
+const audioBtn = document.getElementById('ambient-toggle');
+let isPlaying = false;
+
+// Attempt to autoplay immediately on load
+ambientAudio.play().then(() => {
+  // Autoplay succeeded
+  isPlaying = true;
+  audioBtn.textContent = '⏸️';
+  audioBtn.title = 'Pause ambient rain';
+}).catch(error => {
+  // Autoplay was blocked by the browser
+  console.log("Autoplay prevented by browser:", error);
+  isPlaying = false;
+  audioBtn.textContent = '🌧️';
+  audioBtn.title = 'Play ambient rain';
+});
+
+// Click event for the toggle button
+audioBtn.addEventListener('click', () => {
+  if (isPlaying) {
+    ambientAudio.pause();
+    audioBtn.textContent = '🌧️';
+    audioBtn.title = 'Play ambient rain';
+  } else {
+    ambientAudio.play().catch(error => console.log("Audio playback prevented:", error));
+    audioBtn.textContent = '⏸️';
+    audioBtn.title = 'Pause ambient rain';
+  }
+  isPlaying = !isPlaying;
+});
+// ----------------------------------------------------------------
+
 // ---------------------------------------------------------------- home view
 
 function card(herb) {

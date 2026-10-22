@@ -222,3 +222,22 @@ footer {
   text-align: center;
   color: var(--soil);
 }
+
+#ambient-toggle {
+  background-color: white; /* Matches the white circle of the logo */
+  border: none;
+  border-radius: 50%; /* Makes it a perfect circle */
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+  transition: transform 0.2s ease;
+}
+
+#ambient-toggle:hover {
+  transform: scale(1.1); /* Slight grow effect when hovered */
+}
