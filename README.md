@@ -1,4 +1,4 @@
-# Team ओस की बूँदें
+# Team:
 - Anchal
 - Akhin
 - Abhinav
@@ -8,8 +8,8 @@
 
 A small website about herbs you can smell, taste and grow. Every herb has its own page, built in the browser from a JSON file.
 
-**Live site:** https://abhinavparbat.github.io/culs-frontend-day1/
-**Repository:** https://github.com/AbhinavParbat/culs-frontend-day1
+**Live site:** https://akhin98.github.io/culs-frontend-day1_AK/
+**Repository:** https://github.com/Akhin98/culs-frontend-day1_AK/
 
 Made for the Frontend Development course (CULS, 2026). It started as the repaired website from day 1 and grew over days 2-4.
 
